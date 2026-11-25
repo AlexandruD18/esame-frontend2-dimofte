@@ -16,7 +16,7 @@ const MovieDetailPage = () => {
         fetch(`${API_URL}/movie/${id}?api_key=${API_KEY}`)
             .then((response) => {
                 if (!response.ok) {
-                    throw new Error("Film non trovato.");
+                    throw new Error();
                 }
                 return response.json();
             })
@@ -24,14 +24,14 @@ const MovieDetailPage = () => {
                 setMovie(data);
                 setLoading(false);
             })
-            .catch((err: Error) => {
-                setError(err.message);
+            .catch(() => {
+                setError("Film non trovato.");
                 setLoading(false);
             });
     }, [id]);
 
     if (loading) {
-        return <div>Caricamento…</div>;
+        return <div>Caricamento...</div>;
     }
 
     if (error || !movie) {
@@ -63,7 +63,7 @@ const MovieDetailPage = () => {
                         <li>Voto: {movie.vote_average.toFixed(1)}</li>
                         <li>Voti: {numero_voti}</li>
                         <li>Stato: {movie.status}</li>
-                        <li>Lingua: {movie.spoken_languages[0]?.english_name}</li>
+                        <li>Lingua: {movie.spoken_languages[0]?.english_name || "n.d."}</li>
                     </ul>
 
                     <div className="detail__genres">
@@ -76,7 +76,7 @@ const MovieDetailPage = () => {
                     <p className="detail__overview">{movie.overview}</p>
 
                     <p className="card__meta">
-                        Produzione: {movie.production_companies.map((company) => company.name).join(" · ")}
+                        Produzione: {movie.production_companies.map((company) => company.name).join(" · ") || "n.d."}
                     </p>
                 </div>
             </article>
