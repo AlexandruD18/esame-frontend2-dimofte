@@ -76,7 +76,7 @@ Il riferimento visuale per la progettazione è il **wireframe HTML** fornito nel
 - Il documento di progettazione deve essere **necessariamente in formato Word** (`.docx`).
 - **Altri formati** (PDF, Google Docs esportato, Markdown, immagini, ecc.) vengono conteggiati con **valutazione 0**.
 - Il file Word compilato deve essere **caricato e consegnato su Teams**.
-- La scheda **non** deve essere inclusa nel repository GitHub.
+- La scheda **deve** essere inclusa nel repository GitHub.
 
 ---
 
