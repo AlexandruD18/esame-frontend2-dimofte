@@ -70,6 +70,7 @@ export type MovieListItem = {
     popularity: number;
     poster_path: string | null;
     release_date: string;
+    softcore: boolean;
     title: string;
     video: boolean;
     vote_average: number;

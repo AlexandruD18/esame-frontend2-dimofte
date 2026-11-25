@@ -25,3 +25,6 @@ dist-ssr
 
 # File temporanei di Word
 ~$*.docx
+
+# Variabili d'ambiente (chiave API)
+.env

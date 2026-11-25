@@ -269,3 +269,12 @@ a.card__cta:hover {
     color: #555;
     background: #fafafa;
 }
+
+/* Poster immagini */
+img.card__poster,
+img.detail__poster {
+    display: block;
+    width: 100%;
+    padding: 0;
+    object-fit: cover;
+}
